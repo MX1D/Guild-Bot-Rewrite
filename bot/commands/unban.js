@@ -12,7 +12,7 @@ export default {
 
         const mojang = await getMojangData(args[0]).catch(e => console.log(e));
 
-        let res = await schema.findOneAndUpdate({ uuid: mojang.id }, { $set: { banned: "yes" } });
+        let res = await schema.findOneAndUpdate({ uuid: mojang.id }, { $set: { banned: "no" } });
         if (!res) {
             await schema.create({
                 uuid: mojang.id,
@@ -26,8 +26,10 @@ export default {
             sendGuildMessage(mojang.name);
         }
 
-        bot.say(`/g invite ${ args[0] }`);
-
+        setTimeout(() => {
+            bot.say(`/g invite ${ args[0] }`);
+        }, 1100)
+            
         function sendGuildMessage (username) {
             const messages = [`${ username } Has been unbanned from the guild.`, `unbanned ${ username } of the guild!`, `The user ${ username } been unbanned.`, `${ username } must be annoying to get unbanned ngl`, `KEKW i just unbanned ${ username } imagine`, `woohooo unbanned ${ username }`];
             const message = messages[Math.floor(Math.random() * messages.length)];
