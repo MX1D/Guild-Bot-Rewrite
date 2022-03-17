@@ -50,6 +50,7 @@ You can leave empty if you don't want this.
 ### Text Channel
 ---
 The text channel is the channel you want to have the chat linked to, you need to put the channel id for the chat bridge to function here's how it would look:
+
 ![chat](https://cdn.discordapp.com/attachments/850843468938870824/953974461244260432/unknown.png)
 
 ### API Key
@@ -59,7 +60,7 @@ This is your hypixel API key, doesn't have to be the bot's API key any key will 
 ### MongoDB
 ---
 This is the database that the bot info will be stored in, this is requried for these commands `Rep, Warn and Ban`, You can check this video explaining how to setup mongoDB 
-<iframe width="1223" height="697" src="https://www.youtube.com/embed/rPqRyYJmx2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/rPqRyYJmx2g
 
 ### Log Channel
 ---
