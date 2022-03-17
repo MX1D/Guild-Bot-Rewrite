@@ -349,7 +349,7 @@ export async function bestiaryPhoto (username, bestiary, client) {
     ctx.fillStyle = "#000000";
     ctx.font = '20px "Minecraft"';
     // ctx.shadowColor = "#ffffff";
-    // ctx.shadowOffsetX, ctx.shadowOffsetY = 2;
+    ctx.shadowOffsetX, ctx.shadowOffsetY = 0;
 
     bestiary.forEach((mob, i) => {
         if (i === 0)
