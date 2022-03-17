@@ -15,7 +15,7 @@ export default {
         // Sending the embed details
         if (message.embeds.length > 0) {
             setTimeout(() => {
-                msg.embeds.forEach(embed => {
+                message.embeds.forEach(embed => {
                     if (embed.description) {
                         embed.description.split("\n").forEach((line, i) => {
                             setTimeout(() => {
