@@ -6,7 +6,7 @@ export default {
                     image.forEach((element, index) => {
                         if (element.url)
                             setTimeout(() => {
-                                bot.say(element.url).catch(e => console.log(e));
+                                bot.say(`/gc ${ element.url }`).catch(e => console.log(e));
                             }, 500 * (index + 1));
                     });
                 }, i * 1000);
