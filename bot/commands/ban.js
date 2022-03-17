@@ -26,7 +26,9 @@ export default {
             sendGuildMessage(mojang.name);
         }
 
+	setTimeout(() => {
         bot.say(`/g kick ${ args[0] } banned${ args.join(" ") ? `:${ args.join(" ") }` : "" }`);
+	}, 1100)
 
         function sendGuildMessage (username) {
             const messages = [`${ username } Has been banned from the guild.`, `Banned ${ username } of the guild!`, `The user ${ username } been banned.`, `${ username } must be annoying to get banned ngl`, `KEKW i just banned ${ username } imagine`, `woohooo banned ${ username }`];
