@@ -1,0 +1,19 @@
+{
+    "email": "",
+    "password": "",
+    "auth": "microsoft",
+    "token": "",
+    "prefix": "!",
+    "adminTag": "",
+    "staff": [""],
+    "updateschannel": "",
+    "textChannel": "",
+    "apikey": "",
+    "mongodb": "",
+    "logChannel": "",
+    "guildName": "",
+    "guildID": "",
+    "webhook": "",
+    "frag": false,
+    "gJoinStats": false
+}
