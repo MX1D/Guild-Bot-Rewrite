@@ -6,7 +6,7 @@ export default {
                     image.forEach((element, index) => {
                         if (element.url)
                             setTimeout(() => {
-                                bot.say(`/gc ${ element.url }`).catch(e => console.log(e));
+                                bot.say(element.url).catch(e => console.log(e));
                             }, 500 * (index + 1));
                     });
                 }, i * 1000);
@@ -16,7 +16,7 @@ export default {
         if (message.channel.id !== bot.config.textChannel) return;
         const cleared = message.content.replace(/ /g, "");
         if (cleared !== "")
-            bot.say(`/gc ${ message.member.nick ? message.member.nick : message.author.username }: ${ message.content.split("\n")[0] }`).catch(e => console.log(e));
+            bot.say(`/gc ${ message.member.nickname ? message.member.nickname : message.author.username }: ${ message.content.split("\n")[0] }`).catch(e => console.log(e));
 
         // Sending attachments in game so players can see the photos someone sends
 
@@ -27,7 +27,7 @@ export default {
                     image.forEach((element, index) => {
                         if (element.url)
                             setTimeout(() => {
-                                bot.say(`/gc ${ message.member.nick ? message.member.nick : message.author.username }: ${ element.url }`).catch(e => console.log(e));
+                                bot.say(`/gc ${ message.member.nickname ? message.member.nickname : message.author.username }: ${ element.url }`).catch(e => console.log(e));
                             }, 500 * (index + 1));
                     });
                 }, i * 1000);
