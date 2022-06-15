@@ -64,6 +64,10 @@ bot.once("login", () => {
     };
 });
 
+process.on("uncaughtException", e => {
+  console.log(e + "")
+})
+
 // Command handler setup
 
 const commandFiles = fs.readdirSync("./bot/commands/").filter(files => files.endsWith(".js"));
